@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MeProdRemover:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MeProdRemover_jar</output-path>
+    <root id="archive" name="MeProdRemover.jar">
+      <element id="module-output" name="MeProdRemover" />
+    </root>
+  </artifact>
+</component>

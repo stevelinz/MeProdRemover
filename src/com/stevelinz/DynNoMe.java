@@ -21,7 +21,7 @@ public class DynNoMe {
         JFileChooser fileChooser = new JFileChooser();
 
         int status = fileChooser.showOpenDialog(null);
-        int once = 0;
+        final int MEKORMA_PRODUCTS_SIX = 6;
 
         FileReader file = new FileReader(fileChooser.getSelectedFile());
         BufferedReader inputFile = new BufferedReader(file);
@@ -47,12 +47,13 @@ public class DynNoMe {
             JOptionPane.showMessageDialog(null, "Saved: " + filenameS + ".set");
             FileWriter outFile = new FileWriter(fileS + ".set");
 
+
             while ((listNew = inputFile.readLine()) != null)
             {
                 fList.add(listNew);
             }
             int productCount =Integer.parseInt(fList.get(0));
-            productCount  = productCount - 5;
+            productCount  = productCount - MEKORMA_PRODUCTS_SIX;
             String backToString=Integer.toString(productCount);
             fList.set(0, backToString);
             outFile.write(fList.get(0) + "\n");
